@@ -1,0 +1,10 @@
+Big Picture UML
+
++----------------+
+|   Connect4     |
++----------------+
+| - main()       |
+| - checkGrid()  |
+| - addChip()    |
+| - showGrid()   |
++----------------+
