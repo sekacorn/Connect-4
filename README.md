@@ -1,5 +1,5 @@
 # Connect4 Game
-=====================================================================================================================================
+
 
 This is a Java implementation of the Connect4 game. It allows two players to take turns dropping their colored disks into a grid and tries to connect four disks of the same color either horizontally, vertically, or diagonally.
 
