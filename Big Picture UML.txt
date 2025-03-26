@@ -1,10 +1,37 @@
 Big Picture UML
 
-+----------------+
-|   Connect4     |
-+----------------+
-| - main()       |
-| - checkGrid()  |
-| - addChip()    |
-| - showGrid()   |
-+----------------+
++---------------------+
+|      JFrame         |
+|                     |
++---------------------+
+          ^
+          |
+          | extends
+          |
++---------------------+       +---------------------+
+|    Connect4GUI      |------>|      JPanel         |
+| -grid: char[][]     |  1    | #paintComponent(g)  |
+| -columnButtons:     |       +---------------------+
+|  JButton[]          |       | Anonymous Inner     |
+| -redScoreLabel:     |<......| Class              |
+|  JLabel            |       +---------------------+
+| -yellowScoreLabel:  |
+|  JLabel            |       +---------------------+
+| -redScore: int      |------>|      JButton        |
+| -yellowScore: int   |  7    |                     |
+| -redTurn: boolean   |       +---------------------+
+| -gamePanel: JPanel  |
+| +Connect4GUI()      |       +---------------------+
+| -drawGrid(g)        |------>|      JLabel         |
+| -dropDisk(column)   |  2    |                     |
+| -addChip(col,disk)  |       +---------------------+
+| -checkWin()         |
+| -announceWinner(w)  |       +---------------------+
+| -updateScore()      |......>|    JOptionPane      |
+| -resetGame()        |       | +showMessageDialog()|
+| -updateButtonColors()       +---------------------+
+| +main(args)         |
++---------------------+       +---------------------+
+                             |   SwingUtilities    |
+                             | +invokeLater(r)     |
+                             +---------------------+
