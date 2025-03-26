@@ -27,10 +27,9 @@ public class Connect4GUI extends JFrame {
             }
         }
 
-        // Set up window properties
         setTitle("Connect 4"); // Window title
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close operation
-        setLayout(new BorderLayout()); // Layout manager
+        setLayout(new BorderLayout());
 
         // Create and set up score panel
         JPanel scorePanel = new JPanel();
@@ -53,7 +52,7 @@ public class Connect4GUI extends JFrame {
         gamePanel.setPreferredSize(new Dimension(700, 600)); // Set board size
         add(gamePanel, BorderLayout.CENTER); // Add to center of window
 
-        // Create button panel for dropping disks and quitting
+        // Create button panel for dropping disks, restarting, and quitting
         JPanel buttonPanel = new JPanel();
         for (int i = 0; i < 7; i++) {
             columnButtons[i] = new JButton("Drop " + (i + 1)); // Column buttons
@@ -66,6 +65,16 @@ public class Connect4GUI extends JFrame {
             });
             buttonPanel.add(columnButtons[i]);
         }
+        
+        // Create and add restart button
+        JButton restartButton = new JButton("Restart");
+        restartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetGame(); // Reset the game when clicked
+            }
+        });
+        buttonPanel.add(restartButton);
         
         // Create and add quit button
         JButton quitButton = new JButton("Quit");
