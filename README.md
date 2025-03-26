@@ -21,12 +21,14 @@ This is a Java-based graphical implementation of the classic Connect 4 game. Two
 1. **Compile the code:**
    ```bash
    javac Connect4GUI.java
-## Run the application:
+   ```
+2. Run the application:
   ```bash
   java Connect4GUI
+  ```
 
 ## Gameplay
-  The game starts with Red player's turn
+  - The game starts with Red player's turn
   Click a "Drop" button (1-7) to place a disk in that column
   Buttons show Red or Yellow color indicating whose turn it is
   Players alternate turns
