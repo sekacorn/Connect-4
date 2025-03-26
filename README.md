@@ -1,43 +1,50 @@
-# Connect4 Game
+# Connect 4 GUI Game
 
+## Overview
+This is a Java-based graphical implementation of the classic Connect 4 game. Two players (Red and Yellow) take turns dropping colored disks into a 6x7 grid, aiming to connect four disks in a row vertically, horizontally, or diagonally.
 
-This is a Java implementation of the Connect4 game. It allows two players to take turns dropping their colored disks into a grid and tries to connect four disks of the same color either horizontally, vertically, or diagonally.
+## Features
+- Graphical user interface using Java Swing
+- 6x7 game board with blue background and white slots
+- Red and Yellow player disks
+- Column drop buttons that change color based on current turn
+- Score tracking for both players
+- Quit button to exit the game
+- Automatic game reset after a win
+- Error message for full columns
 
-## How to Play
+## Requirements
+- Java Development Kit (JDK) 8 or higher
+- Java Runtime Environment (JRE) to run the compiled program
 
-1) Run the `Connect4` class.
-2)The game starts with an empty grid displayed on the console.
-3)Each player takes turns dropping their disk into a column by entering a column number from 1 to 7 when prompted.
-4) The players alternate turns, with the red player ('R') going first and the yellow player ('Y') going second.
-5) The game continues until one of the players connects four disks of their color in a row or if the grid is completely filled without any winning sequence.
-6) The game ends with the result displayed on the console, indicating the winner or a tie.
+## How to Run
+1. **Compile the code:**
+   ```bash
+   javac Connect4GUI.java
+## Run the application:
+  ```bash
+  java Connect4GUI
 
-## How to Compile and Run
+## Gameplay
+  The game starts with Red player's turn
+  Click a "Drop" button (1-7) to place a disk in that column
+  Buttons show Red or Yellow color indicating whose turn it is
+  Players alternate turns
+  First player to connect 4 disks wins
+  Score updates after each win
+  Game resets automatically after a win
+  Click "Quit" to exit
 
-To compile and run the Connect4 game, follow these steps:
+## Implements:
+  Custom graphics drawing for the game board
+  Event handling for button clicks
+  Win condition checking in all directions
+  Score management
+  Game state management
+## Dependencies
+    Standard Java libraries only (Swing, AWT)
+    No external dependencies required
+## Known Issues
+    No tie game detection (game continues until a win)
+    
 
-1} Make sure you have Java installed on your system.
-2) Open a command prompt or terminal.
-3) Navigate to the directory where the `Connect4.java` file is located.
-4) Compile the code by running the following command:
-
-```
-javac Connect4.java
-```
-
-5. After successful compilation, run the game using the following command:
-
-```
-java Connect4
-```
-
-6. Follow the on-screen instructions to play the game.
-
-=============================================
-## Gameplay Rules
-
-- The grid has 7 columns and 7 rows.
-- Players take turns dropping their disks into a column of their choice.
-- Disks stack on top of each other, occupying the lowest available position in the chosen column.
-- The game continues until a player connects four of their disks in a row (horizontally, vertically, or diagonally) or if the grid is completely filled without any winning sequence.
-- The game will display the winner (either the red player 'R' or the yellow player 'Y') or indicate a tie if there is no winner.
